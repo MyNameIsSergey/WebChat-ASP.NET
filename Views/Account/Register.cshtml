@@ -1,0 +1,26 @@
+﻿@model WebChat.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+<form method="post" asp-controller="Account" asp-action="Register">
+    <label asp-for="Login" class="popup-label"></label>
+    <input asp-for="Login" type="text" class="chat-name-input">
+    <span asp-validation-for="Login"></span>
+    <br>
+    <label asp-for="UserName" class="popup-label"></label>
+    <input asp-for="UserName" type="text" class="chat-name-input">
+    <span asp-validation-for="UserName"></span>
+    <br>
+    <label asp-for="Password" class="popup-label"></label>
+    <input asp-for="Password" type="password" class="chat-name-input">
+    <span asp-validation-for="Password"></span>
+    <br>
+    <label asp-for="PasswordConfirm" class="popup-label"></label>
+    <input asp-for="PasswordConfirm" type="password" class="chat-name-input">
+    <span asp-validation-for="PasswordConfirm"></span>
+
+    <input type="submit" class="base-button popup-button" value="Register">
+</form>

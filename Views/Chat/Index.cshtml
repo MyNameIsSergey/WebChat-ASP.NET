@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewData["Title"] = "Rooms";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/css/chat.css">
+    <link rel="stylesheet" href="~/css/button.css">
+    <link rel="stylesheet" href="~/css/chatInfo.css">
+    <link rel="stylesheet" href="~/css/popups.css">
+    <link rel="stylesheet" href="~/css/user.css">
+</head>
+<body>
+
+    <div class="main-color container clearfix">
+        <div class="people-list" id="people-list">
+            <div class='common-header'>
+                <h1 class="popup-header">Chat list</h1>
+            </div>
+            <button type="button" class="base-button center-button" id="create-popup-open">Create chat</button>
+            <ul class="list" id="chat-list">
+            </ul>
+        </div>
+
+        <div class="chat">
+            <div class='common-header'>
+                <h1 class="popup-header">Chat history</h1>
+            </div>
+
+
+            <div class="chat-history">
+                <ul id="chat-history">
+                </ul>
+
+            </div>
+
+            <div class="chat-message clearfix">
+                <textarea class="chat-message" name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
+
+                <button class="chat-message" id="sendButton">Send</button>
+
+            </div>
+
+        </div>
+
+        <div class="chat-info-container" id="addMemberPopup">
+            <div class='common-header'>
+                <h1 class="popup-header">Chat info</h1>
+                <img alt="avatar" class="me-pic" id="me-popup-open" />
+                <span class="popup-close">&times;</span>
+            </div>
+            <div class='chat-info-body people-list'>
+                <div class="add-mem-field">
+                    <label class="popup-label">ID</label>
+                    <input type="text" id="mem-id" class="chat-name-input" style="display: inline">
+                    <button class="base-button center-button" id="add-mem-btn">Add member</button>
+                </div>
+                <input class="base-button center-button" type="button" value="Quit chat" id="quit-chat" />
+                <ul class="list" id="chat-mem">
+                </ul>
+            </div>
+        </div>
+
+        <div class="popup" id="createChatPopup">
+            <div class='popup-content' id='createChatPopup'>
+                <div class='common-header'>
+                    <h1 class="popup-header">Create chat</h1>
+                    <span class="popup-close" id="popup-create-close">&times;</span>
+                </div>
+                <div class='popup-body'>
+                    <label class="popup-label">Name</label>
+                    <input type="text" id="chat-name" class="chat-name-input">
+
+                    <button id="createChatBtn" class="base-button popup-button">Create chat</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="popup" id="userPopup">
+            <div class='popup-content' id='userPopup'>
+                <div class='common-header popup-header'>
+                    <h1 class="popup-header">User</h1>
+                    <span class="popup-close" id="popup-user-close">&times;</span>
+                </div>
+                <div class='popup-body'>
+                    <img id="user-avatar" alt="avatar" class="user-avatar" />
+                    <br />
+                    <h1 id="user-name" class="user-name"></h1>
+                    <div id="user-id" class="user-id"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="mePopup">
+            <div class='popup-content'>
+                <div class='common-header popup-header'>
+                    <h1 class="popup-header">Me</h1>
+                    <span class="popup-close" id="popup-me-close">&times;</span>
+                </div>
+                <div class='popup-body'>
+                    <form asp-action="UpdateUserPhoto" asp-controller="Chat" method="post" enctype="multipart/form-data">
+                        <a class="my-avatar">
+                            <img alt="avatar" class="user-avatar my-avatar" id="my-avatar" />
+                        </a>
+                        <input type="file" id="avatar-input" name="file" style="display: none;">
+                        <input type="submit" id="avatar-input-submit" style="display: none;">
+                    </form>
+                    <h1 class="user-name" id="my-name"></h1>
+                    <div class="user-id" id="my-id"></div>
+                    <a href="~/Account/Logout" class="base-button center-button">Logout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/hubConnection.js"></script>
+    <script src="~/js/chatEntities.js"></script>
+    <script src="~/js/userManager.js"></script>
+    <script src="~/js/chatManager.js"></script>
+    <script src="~/js/popups.js"></script>
+    <script src="~/js/me.js"></script>
+</body>
+
+</html>

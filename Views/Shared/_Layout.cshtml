@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebChat</title>
+    <link rel="stylesheet" type="text/css" href="~/css/chat.css"/>
+    <link rel="stylesheet" type="text/css" href="~/css/popups.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/button.css" />
+</head>
+<body>
+    <div class="popup" style="display: block;" id="mePopup">
+        <div class='popup-content' style="margin-top:10%;" id='mePopup'>
+            <div class='common-header popup-header'>
+                <h1 class="popup-header">@ViewData["Title"]</h1>
+            </div>
+            <div class='popup-body'>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model WebChat.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<a href="~/Account/Register" class="base-button center-button" style="text-decoration:none">Register</a>
+
+<form method="post" asp-controller="Account" asp-action="Login">
+    <label asp-for="Login" class="popup-label"></label>
+    <input asp-for="Login" type="text" class="chat-name-input">
+    <span asp-validation-for="Login"></span>
+    <br>
+    <label asp-for="Password" class="popup-label"></label>
+    <input asp-for="Password" type="password" class="chat-name-input">
+    <span asp-validation-for="Password"></span>
+    <input asp-for="RememberMe" type="checkbox" />
+
+    <input type="submit" class="base-button popup-button" value="Login">
+</form>
