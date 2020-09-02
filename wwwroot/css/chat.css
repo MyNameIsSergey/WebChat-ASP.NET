@@ -1,0 +1,271 @@
+﻿@import url(https://fots.googleapis.com/css?family=Lato:400,700);
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #C5DDEB;
+    font: 14px/20px "Lato", Arial, sans-serif;
+    color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-color {
+    background: #edeef0;
+}
+
+.common-header {
+    background-color: #4a76a8;
+    position: relative;
+    height: 54px;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container {
+    margin: 0 auto;
+    border-radius: 5px;
+    border-width: 2px;
+    height: 99vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+
+ul.people-list {
+    padding: 20px;
+    height: 100%;
+}
+
+li.people-list {
+    padding-bottom: 20px;
+}
+
+
+.people-list {
+    width: 20%;
+    float: left;
+}
+
+.chat-message {
+    padding: 30px;
+    height: 20%;
+}
+
+.chat-history {
+    overflow-y: scroll;
+    height: 70vh;
+}
+
+
+ul.chat-history {
+    width: 100%;
+}
+
+
+.chat {
+    float: left;
+    background: #F2F5F8;
+    color: #434651;
+    width: 60%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+
+img {
+    float: left;
+}
+
+.about {
+    float: left;
+    margin-top: 8px;
+}
+
+.about {
+    padding-left: 8px;
+}
+
+.status {
+    color: gray;
+}
+
+img.chat.chat-header {
+    float: left;
+}
+
+.chat-about {
+    float: left;
+    padding-left: 10px;
+    margin-top: 6px;
+    height: 20%;
+}
+
+.chat-with {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.fa-star {
+    float: right;
+    color: #D8DADF;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 2px solid white;
+}
+
+.message-data {
+    margin-bottom: 15px;
+}
+
+.message-data-time {
+    color: lighten(gray, 8%);
+    padding-left: 6px;
+}
+
+.message {
+    color: black;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    width: 90%;
+    border-radius: 21px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+    .message:hover {
+        background: #b2b5ff;
+    }
+
+    .message::after {
+        bottom: 100%;
+        left: 7%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+.my-message {
+    border-bottom-right-radius: 0px;
+    float: right;
+    margin-right: 10px;
+}
+
+.other-message {
+    border-bottom-left-radius: 0px;
+    float: left;
+}
+
+textarea.chat-message {
+    width: 80%;
+    border: none;
+    padding: 10px 20px;
+    font: 14px/22px "Lato", Arial, sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+button.chat-message {
+    float: right;
+    color: blue;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #F2F5F8;
+}
+
+button:hover.chat-message {
+    color: darken(blue, 7%);
+}
+
+.online, .offline, .me {
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix {
+    list-style-type: none;
+}
+
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+.chat-list-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chat-preview {
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+    .chat-preview:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        background: #b2b5ff;
+    }
+
+.current {
+    background: #b2b5ff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.add-mem-field {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

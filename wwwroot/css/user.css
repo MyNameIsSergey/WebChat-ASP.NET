@@ -1,0 +1,41 @@
+﻿.user-avatar {
+    width: 90%;
+    align-content: center;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.user-name {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-id {
+    text-align: center;
+}
+
+.me-pic {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+    .me-pic:hover {
+        cursor: pointer;
+    }
+
+.my-avatar {
+    display: inline-block;
+}
+
+    .my-avatar:hover {
+        background: url("https://img.icons8.com/cotton/2x/upload.png") no-repeat 50% 50%;
+    }
+
+img.my-avatar:hover {
+    opacity: 0;
+}

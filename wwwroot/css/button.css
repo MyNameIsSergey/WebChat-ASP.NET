@@ -1,0 +1,22 @@
+﻿
+.base-button {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+    .base-button:hover {
+        background-color: #4a76a8;
+        color: white;
+        /*transform: scale(1.2, 1.2);*/
+    }
+
+.center-button {
+    margin-left: 20%;
+    width: 60%;
+    display: block;
+}
